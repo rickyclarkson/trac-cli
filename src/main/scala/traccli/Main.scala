@@ -1,7 +1,11 @@
 package traccli
 
+import com.gargoylesoftware.htmlunit.WebClient
+
 object Main {
   def main(args: Array[String]) {
-    println("Hello, World")
+    val webclient = new WebClient
+    val page = webclient.getPage("http://github.com")
+    println(page)
   }
 }
